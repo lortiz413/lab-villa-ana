@@ -187,19 +187,39 @@ section.block{position:relative;padding:112px 0}
 .timeline-mini .ln{flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 10px)}
 @media (max-width:900px){.agencies{grid-template-columns:1fr}.origin{grid-template-columns:1fr}}
 
-/* video card */
-.videos{margin-top:56px;padding:28px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center}
-.videos .frame{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
-.videos .frame img{width:100%;height:100%;object-fit:cover;opacity:.55}
-.videos .frame a{position:absolute;inset:0;display:grid;place-items:center;text-decoration:none;color:#fff}
-.videos .play{width:74px;height:74px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(236,48,37,.25);transition:transform .3s var(--ease)}
-.videos .frame a:hover .play{transform:scale(1.08)}
-.videos .play svg{width:26px;height:26px;margin-left:4px}
-.videos .frame .lbl{position:absolute;left:14px;top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.45);padding:6px 10px;border-radius:6px}
-.videos h3{font-size:26px;font-stretch:108%}
-.videos p{margin-top:12px;color:var(--muted)}
-.videos .soon{display:inline-flex;margin-top:18px;gap:8px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
-@media (max-width:900px){.videos{grid-template-columns:1fr}}
+/* showreel */
+.reel{margin-top:56px}
+.reel .rhead{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.reel .rhead h3{font-size:clamp(24px,2.6vw,32px);font-stretch:110%}
+.reel .rhead p{color:var(--muted);max-width:56ch;margin-top:6px}
+.reel .rhead .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);white-space:nowrap}
+.reelgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vcard{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .35s var(--ease),box-shadow .35s}
+.vcard:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(24,11,13,.35)}
+.vcard .frame{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden}
+.vcard .frame video,.vcard .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vcard .frame img{opacity:.7;transition:transform .6s var(--ease),opacity .3s}
+.vcard:hover .frame img{transform:scale(1.04)}
+.vcard .frame .ov{position:absolute;inset:0;display:grid;place-items:center;cursor:pointer;border:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.45));padding:0;transition:opacity .3s}
+.vcard .frame.playing .ov{opacity:0;pointer-events:none}
+.vcard .frame .ov .play{width:66px;height:66px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 10px rgba(236,48,37,.25);transition:transform .3s var(--ease)}
+.vcard .frame .ov:hover .play{transform:scale(1.08)}
+.vcard .frame .ov .play svg{width:24px;height:24px;margin-left:3px}
+.vcard .frame .lbl{position:absolute;left:12px;top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.5);padding:6px 10px;border-radius:6px;pointer-events:none}
+.vcard .frame .dur{position:absolute;right:12px;bottom:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:#fff;background:rgba(0,0,0,.5);padding:5px 8px;border-radius:6px;pointer-events:none}
+.vcard .frame.playing .lbl,.vcard .frame.playing .dur{opacity:0}
+.vcard .meta{padding:20px 22px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.vcard .meta .ag{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.vcard .meta .ag img{height:26px;width:auto}
+.vcard .meta .ag img.arroba{height:30px}
+.vcard .meta .ag span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.vcard h4{margin:4px 0 0;font-family:var(--display);font-stretch:108%;font-weight:800;font-size:19px;letter-spacing:-.01em}
+.vcard p{color:var(--muted);font-size:14.5px}
+.vcard.soon .frame{background:linear-gradient(135deg,#2a1416,#180B0D)}
+.vcard.soon .frame .ov{cursor:default}
+.vcard.soon .frame .ov .play{background:rgba(255,255,255,.12);box-shadow:none}
+.vcard .frame .ov .play svg.clock{margin-left:0}
+@media (max-width:900px){.reelgrid{grid-template-columns:1fr}}
 
 /* ---------- Cliente / cobertura: mapa real de PR ---------- */
 .prmap{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:18px 22px 14px;overflow:hidden;box-shadow:0 30px 80px -50px rgba(24,11,13,.35)}
@@ -567,18 +587,51 @@ footer .mono{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tr
       <p><b>Ventaja clave:</b> una sola coordinación, resultados coherentes en todas sus plataformas y medios de comunicación.</p>
     </div>
 
-    <div class="videos rv" id="videos">
-      <div class="frame">
-        <img src="studio.jpg" alt="Set de producción audiovisual">
-        <span class="lbl">Algunos de nuestros clientes</span>
-        <a href="https://drive.google.com/file/d/18BgDMODtoCinN4zZOy1ZxrFGLRfyuRCM/view?usp=drive_link" target="_blank" rel="noopener" aria-label="Ver video institucional de Grupo Mamery">
-          <span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span>
-        </a>
+    <div class="reel rv" id="videos">
+      <div class="rhead">
+        <div>
+          <h3>Algunos de nuestros clientes</h3>
+          <p>Tres muestras del trabajo del grupo: producción institucional, contenido para redes y comunicación telefónica. Toca para reproducir.</p>
+        </div>
+        <span class="tag">Showreel · 3 piezas</span>
       </div>
-      <div>
-        <h3>Video institucional · Grupo Mamery</h3>
-        <p>Una muestra del nivel de producción audiovisual que respalda esta propuesta: dirección, fotografía profesional y locución para marcas en Puerto Rico.</p>
-        <span class="soon">▶ Más videos institucionales próximamente en esta página</span>
+      <div class="reelgrid">
+        <article class="vcard">
+          <div class="frame">
+            <img src="studio.jpg" alt="">
+            <span class="lbl">Video institucional</span>
+            <a class="ov" href="https://drive.google.com/file/d/18BgDMODtoCinN4zZOy1ZxrFGLRfyuRCM/view?usp=drive_link" target="_blank" rel="noopener" aria-label="Ver video institucional de Grupo Mamery en Google Drive"><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span></a>
+          </div>
+          <div class="meta">
+            <div class="ag"><img src="logo-mamery.png" alt="Grupo Mamery"><span>Producción</span></div>
+            <h4>Video institucional · Grupo Mamery</h4>
+            <p>Dirección, fotografía profesional y locución para marcas en Puerto Rico. Se abre en una pestaña nueva.</p>
+          </div>
+        </article>
+        <article class="vcard">
+          <div class="frame" data-video>
+            <video preload="metadata" playsinline poster="poster-arroba.jpg" src="video-arroba.mp4"></video>
+            <span class="lbl">Audiovisual · Redes sociales</span>
+            <span class="dur">1:38</span>
+            <button class="ov" type="button" aria-label="Reproducir audiovisual de Arroba"><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span></button>
+          </div>
+          <div class="meta">
+            <div class="ag"><img class="arroba" src="logo-arroba.png" alt="Arroba"><span>Digital</span></div>
+            <h4>Audiovisual Arroba · Redes Sociales 2025</h4>
+            <p>Contenido para redes sociales: el estándar visual que llevaríamos a las 17 localidades de Villa Ana.</p>
+          </div>
+        </article>
+        <article class="vcard soon" id="vcard-soh">
+          <div class="frame">
+            <span class="lbl">Telefonía · Audio corporativo</span>
+            <div class="ov"><span class="play"><svg class="clock" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span></div>
+          </div>
+          <div class="meta">
+            <div class="ag"><img src="logo-spotonhold.png" alt="Spot on Hold"><span>Telefonía</span></div>
+            <h4>SOH Telefonía · Spot on Hold</h4>
+            <p>Experiencia telefónica del cliente: mensajes en espera, IVR y audio corporativo. Video próximamente.</p>
+          </div>
+        </article>
       </div>
     </div>
   </div>
@@ -1204,6 +1257,15 @@ footer .mono{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tr
     let i=0; const iv=setInterval(()=>{ i++; if(i>=phases.length||document.getElementById('phases').dataset.user){clearInterval(iv);return;} phases.forEach(x=>x.classList.remove('on')); phases[i].classList.add('on'); },1800);
     phases.forEach(p=>p.addEventListener('click',()=>{document.getElementById('phases').dataset.user=1;clearInterval(iv);}));
   })},{threshold:.4}); const ph=document.getElementById('phases'); if(ph)pio.observe(ph);
+
+  /* ---- Showreel players ---- */
+  const frames=[...document.querySelectorAll('.frame[data-video]')];
+  frames.forEach(f=>{ const v=f.querySelector('video'), ov=f.querySelector('.ov');
+    const start=()=>{ frames.forEach(o=>{ if(o!==f){ const ov2=o.querySelector('video'); if(ov2&&!ov2.paused){ov2.pause();} } }); f.classList.add('playing'); v.controls=true; v.play(); };
+    ov.addEventListener('click',start);
+    v.addEventListener('pause',()=>{ if(!v.seeking){ } });
+    v.addEventListener('ended',()=>{ f.classList.remove('playing'); v.controls=false; v.currentTime=0; v.load(); });
+  });
 
   /* ---- Investment calculator ---- */
   const rows=[...document.querySelectorAll('#tbl tbody tr')];
