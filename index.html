@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Villa Ana 360°</title>
+<meta name="description" content="Estrategia Integral de Comunicación y Posicionamiento 360° para las 17 localidades de Laboratorio Clínico Villa Ana. Propuesta de Grupo Mamery, Spot on Hold y Arroba.">
+<link rel="icon" type="image/png" href="assets/logo-villa-ana-alpha.png">
+<meta property="og:title" content="Villa Ana 360° · Estrategia Integral de Comunicación">
+<meta property="og:description" content="Conectando la excelencia de sus 17 localidades con una estrategia publicitaria y digital unificada.">
+<meta property="og:image" content="assets/logo-villa-ana.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,100..125,400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --red:#EC3025;
+  --red-deep:#B4160F;
+  --red-glow:rgba(236,48,37,.45);
+  --ink:#180B0D;
+  --ink-2:#24141640;
+  --porcelain:#FAF7F6;
+  --paper:#FFFFFF;
+  --rose:#FCE9E7;
+  --rose-2:#F6D6D2;
+  --text:#1E1214;
+  --muted:#6E6062;
+  --line:#E9DDDB;
+  --line-dark:rgba(255,255,255,.12);
+  --mamery:#A9A300;
+  --arroba:#2B3E6B;
+  --display:"Archivo","Archivo Black","Arial Black",Impact,sans-serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono","SFMono-Regular",Menlo,Consolas,monospace;
+  --max:1180px;
+  --r:18px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--porcelain);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.55;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;font-family:var(--display);font-weight:800;line-height:1.05;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- Grid paper texture ---------- */
+.graph{background-image:
+  linear-gradient(rgba(236,48,37,.06) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(236,48,37,.06) 1px,transparent 1px);
+  background-size:44px 44px}
+
+/* ---------- Progress + nav ---------- */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--red-deep),var(--red));z-index:60;transition:width .15s linear}
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 28px;transition:background .3s,backdrop-filter .3s,box-shadow .3s}
+.nav.solid{background:rgba(250,247,246,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#fff;transition:color .3s}
+.nav.solid .brand{color:var(--text)}
+.nav .brand img{height:34px;width:auto}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav li a{display:block;padding:8px 12px;border-radius:999px;font-size:13.5px;font-weight:600;text-decoration:none;color:rgba(255,255,255,.85);transition:background .2s,color .2s}
+.nav.solid li a{color:var(--muted)}
+.nav li a:hover,.nav li a.on{background:var(--red);color:#fff}
+.nav .cta{padding:9px 16px;border-radius:999px;background:var(--red);color:#fff;font-weight:700;font-size:13.5px;text-decoration:none;box-shadow:0 8px 24px -10px var(--red-glow)}
+@media (max-width:960px){.nav ul{display:none}}
+
+/* ---------- Specimen rail ---------- */
+.rail{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:45;display:flex;flex-direction:column;gap:10px}
+.rail a{display:flex;align-items:center;gap:8px;text-decoration:none;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted);opacity:.7}
+.rail a i{display:block;width:8px;height:8px;border-radius:50%;border:2px solid currentColor;transition:all .25s}
+.rail a span{opacity:0;transform:translateX(6px);transition:all .25s;color:var(--text)}
+.rail a:hover span,.rail a.on span{opacity:1;transform:none}
+.rail a.on i{background:var(--red);border-color:var(--red);box-shadow:0 0 0 4px rgba(236,48,37,.2)}
+.rail a.on{opacity:1}
+.on-dark .rail a{color:rgba(255,255,255,.55)}.on-dark .rail a span{color:#fff}
+@media (max-width:1100px){.rail{display:none}}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+section.block{position:relative;padding:112px 0}
+.dark{background:var(--ink);color:#fff}
+.dark .eyebrow{color:rgba(255,255,255,.7)}
+.eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.eyebrow b{color:var(--red);font-weight:600}
+.eyebrow .bar{display:inline-block;height:12px;width:38px;background:repeating-linear-gradient(90deg,currentColor 0 2px,transparent 2px 4px,currentColor 4px 5px,transparent 5px 8px,currentColor 8px 11px,transparent 11px 13px);opacity:.6}
+.h2{font-size:clamp(34px,4.6vw,58px);font-stretch:112%;max-width:18ch}
+.lead{font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:60ch;margin-top:18px}
+.dark .lead{color:rgba(255,255,255,.72)}
+.head{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:end;margin-bottom:56px}
+.head .lead{margin-top:0}
+@media (max-width:800px){.head{grid-template-columns:1fr;gap:16px}}
+
+/* reveal animation: visible at rest, animates in when entering */
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.rv.in{animation:rise .8s var(--ease) both}
+.rv.in.d1{animation-delay:.08s}.rv.in.d2{animation-delay:.16s}.rv.in.d3{animation-delay:.24s}.rv.in.d4{animation-delay:.32s}
+@media (prefers-reduced-motion:reduce){.rv.in{animation:none}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:88vh;background:var(--ink);color:#fff;overflow:hidden;display:flex;align-items:center;padding:140px 0 90px}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%}
+.hero .glow{position:absolute;right:-20%;top:-30%;width:70vw;height:70vw;background:radial-gradient(closest-side,rgba(236,48,37,.35),transparent 70%);filter:blur(30px);pointer-events:none}
+.hero .glow2{position:absolute;left:-25%;bottom:-40%;width:60vw;height:60vw;background:radial-gradient(closest-side,rgba(180,22,15,.35),transparent 70%);filter:blur(30px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero .kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 14px 8px 10px;border:1px solid var(--line-dark);border-radius:999px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);background:rgba(255,255,255,.04)}
+.hero .kicker i{width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 0 4px rgba(236,48,37,.25);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(236,48,37,.25)}50%{box-shadow:0 0 0 9px rgba(236,48,37,0)}}
+.hero h1{margin-top:26px;font-size:clamp(40px,6.2vw,84px);font-stretch:118%;font-weight:900;letter-spacing:-.03em;line-height:.98}
+.hero h1 em{font-style:normal;color:var(--red);display:block}
+.hero .sub{margin-top:24px;font-size:clamp(17px,1.5vw,21px);color:rgba(255,255,255,.75);max-width:52ch}
+.hero .actions{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;transition:transform .2s var(--ease),box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-red{background:var(--red);color:#fff;box-shadow:0 14px 30px -12px var(--red-glow)}
+.btn-red:hover{background:#f04338}
+.btn-ghost{border-color:var(--line-dark);color:#fff;background:rgba(255,255,255,.04)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn svg{width:16px;height:16px}
+.hero .partners{margin-top:48px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.hero .partners span{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.hero .partners .logos{display:flex;align-items:center;gap:22px;padding:12px 18px;background:#fff;border-radius:14px}
+.hero .partners img{height:34px;width:auto}
+.hero .partners img.arroba{height:40px}
+/* logo plate */
+.plate{position:relative;aspect-ratio:1.05;border-radius:28px;background:linear-gradient(160deg,#fff,#f7eeed);box-shadow:0 40px 90px -30px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.08),inset 0 0 0 1px rgba(255,255,255,.6);display:grid;place-items:center;padding:12%;overflow:hidden;transform:rotate(-2deg)}
+.plate::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(236,48,37,.12),transparent 55%)}
+.plate img{width:100%;position:relative;filter:drop-shadow(0 20px 30px rgba(236,48,37,.25))}
+.plate .tag{position:absolute;left:18px;bottom:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.plate .tag b{color:var(--red);font-weight:600}
+.plate .corner{position:absolute;right:18px;top:16px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:var(--muted)}
+.ring{position:absolute;border-radius:50%;border:1px dashed rgba(255,255,255,.18);animation:spin 40s linear infinite}
+.ring.a{width:120%;aspect-ratio:1;left:-10%;top:-10%}
+.ring.b{width:150%;aspect-ratio:1;left:-25%;top:-25%;animation-duration:70s;animation-direction:reverse;border-style:dotted}
+@keyframes spin{to{transform:rotate(360deg)}}
+.plate-wrap{position:relative}
+@media (prefers-reduced-motion:reduce){.ring,.hero .kicker i{animation:none}}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr}.plate-wrap{max-width:380px;margin:0 auto}.hero{min-height:auto;padding-top:120px}}
+
+/* stats strip */
+.stats{position:relative;background:var(--red);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:30px 28px 28px;border-left:1px solid rgba(255,255,255,.22)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .n{font-family:var(--display);font-stretch:115%;font-weight:900;font-size:clamp(38px,4.5vw,60px);line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat .n sup{font-size:.45em;vertical-align:top;top:.3em;position:relative}
+.stat .l{margin-top:8px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+@media (max-width:800px){.stats .wrap{grid-template-columns:1fr 1fr}.stat{padding:22px 18px}.stat:nth-child(odd){border-left:0;padding-left:0}}
+
+/* ---------- Quiénes somos ---------- */
+.agencies{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.agency{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px;overflow:hidden;transition:transform .35s var(--ease),box-shadow .35s;min-height:300px;display:flex;flex-direction:column}
+.agency:hover{transform:translateY(-6px);box-shadow:0 30px 60px -30px rgba(24,11,13,.35)}
+.agency .logo{height:64px;display:flex;align-items:center;margin-bottom:22px}
+.agency .logo img{max-height:100%;width:auto}
+.agency h3{font-size:22px;font-stretch:108%}
+.agency p{margin-top:10px;color:var(--muted);font-size:15.5px}
+.agency .role{margin-top:auto;padding-top:18px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.agency::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--acc,var(--red));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.agency:hover::after{transform:scaleX(1)}
+.agency.mamery{--acc:var(--mamery)}.agency.arroba{--acc:var(--arroba)}.agency.soh{--acc:var(--red)}
+.ventaja{margin-top:22px;display:flex;gap:18px;align-items:center;padding:22px 26px;border-radius:var(--r);background:var(--ink);color:#fff}
+.ventaja .bolt{flex:none;width:46px;height:46px;border-radius:12px;background:var(--red);display:grid;place-items:center}
+.ventaja .bolt svg{width:22px;height:22px}
+.ventaja b{font-family:var(--display);font-stretch:108%;font-weight:800}
+.ventaja p{color:rgba(255,255,255,.8)}
+.origin{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-bottom:56px}
+.origin .photo{aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;position:relative}
+.origin .photo img{width:100%;height:100%;object-fit:cover}
+.origin .photo .stamp{position:absolute;left:18px;bottom:18px;padding:10px 14px;background:rgba(24,11,13,.72);backdrop-filter:blur(8px);color:#fff;border-radius:10px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.origin .photo .stamp b{color:var(--red);display:block;font-size:22px;font-family:var(--display);letter-spacing:-.02em;font-stretch:112%}
+.timeline-mini{display:flex;gap:12px;align-items:center;margin-top:24px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.timeline-mini .dot{width:10px;height:10px;border-radius:50%;background:var(--red);flex:none}
+.timeline-mini .ln{flex:1;height:1px;background:repeating-linear-gradient(90deg,var(--line) 0 6px,transparent 6px 10px)}
+@media (max-width:900px){.agencies{grid-template-columns:1fr}.origin{grid-template-columns:1fr}}
+
+/* video card */
+.videos{margin-top:56px;padding:28px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center}
+.videos .frame{position:relative;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#000}
+.videos .frame img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.videos .frame a{position:absolute;inset:0;display:grid;place-items:center;text-decoration:none;color:#fff}
+.videos .play{width:74px;height:74px;border-radius:50%;background:var(--red);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(236,48,37,.25);transition:transform .3s var(--ease)}
+.videos .frame a:hover .play{transform:scale(1.08)}
+.videos .play svg{width:26px;height:26px;margin-left:4px}
+.videos .frame .lbl{position:absolute;left:14px;top:12px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(0,0,0,.45);padding:6px 10px;border-radius:6px}
+.videos h3{font-size:26px;font-stretch:108%}
+.videos p{margin-top:12px;color:var(--muted)}
+.videos .soon{display:inline-flex;margin-top:18px;gap:8px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+@media (max-width:900px){.videos{grid-template-columns:1fr}}
+
+/* ---------- Cliente / cobertura ---------- */
+.cover{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.map{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:28px;overflow:hidden}
+.map svg{width:100%;height:auto;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.chip{padding:9px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--text);transition:all .2s}
+.chip:hover,.chip.on{background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 10px 20px -12px var(--red-glow)}
+.map .info{margin-top:18px;min-height:52px;font-size:15px;color:var(--muted)}
+.map .info b{color:var(--text)}
+.two{display:grid;gap:18px}
+.panel{padding:28px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line)}
+.panel.red{background:var(--red);color:#fff;border-color:var(--red)}
+.panel .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-bottom:12px}
+.panel h3{font-size:24px;font-stretch:108%}
+.panel p{margin-top:10px;font-size:16px}
+.panel:not(.red) p{color:var(--muted)}
+@media (max-width:900px){.cover{grid-template-columns:1fr}}
+
+/* ---------- Producción ---------- */
+.prod{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:stretch}
+.prod .photo{position:relative;border-radius:var(--r);overflow:hidden;min-height:420px}
+.prod .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.prod .photo .rec{position:absolute;left:18px;top:18px;display:flex;gap:10px;align-items:center;font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:#fff;background:rgba(0,0,0,.5);padding:8px 12px;border-radius:8px}
+.prod .photo .rec i{width:9px;height:9px;border-radius:50%;background:var(--red);animation:blink 1.2s steps(2) infinite}
+@keyframes blink{to{opacity:0}}
+.prod .photo .fmt{position:absolute;right:18px;bottom:18px;display:flex;gap:8px}
+.prod .photo .fmt span{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:#fff;border:1px solid rgba(255,255,255,.5);padding:6px 9px;border-radius:6px;background:rgba(0,0,0,.35)}
+.list{display:grid;gap:14px}
+.item{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:22px;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid var(--line-dark);transition:background .25s,transform .25s var(--ease)}
+.item:hover{background:rgba(255,255,255,.08);transform:translateX(6px)}
+.item .ic{width:52px;height:52px;border-radius:14px;background:var(--red);display:grid;place-items:center}
+.item .ic svg{width:24px;height:24px}
+.item h3{font-size:20px;font-stretch:108%}
+.item p{margin-top:6px;color:rgba(255,255,255,.72);font-size:15.5px}
+@media (max-width:900px){.prod{grid-template-columns:1fr}.prod .photo{min-height:300px}}
+
+/* ---------- Infraestructura digital ---------- */
+.search-demo{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 30px 80px -40px rgba(24,11,13,.35)}
+.search-demo .bar{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:999px;border:2px solid var(--line);font-size:17px}
+.search-demo .bar svg{width:20px;height:20px;flex:none;color:var(--muted)}
+.search-demo .bar .q{font-weight:600}
+.search-demo .bar .q::after{content:"";display:inline-block;width:2px;height:1.1em;background:var(--red);margin-left:2px;vertical-align:-3px;animation:blink 1s steps(2) infinite}
+.results{margin-top:16px;display:grid;gap:10px}
+.res{display:grid;grid-template-columns:40px 1fr auto;gap:14px;align-items:center;padding:14px 16px;border-radius:12px;border:1px solid var(--line);opacity:.25;transform:translateY(8px);transition:all .5s var(--ease)}
+.res.show{opacity:1;transform:none}
+.res .pin{width:40px;height:40px;border-radius:12px;background:var(--rose);display:grid;place-items:center;color:var(--red)}
+.res .pin svg{width:20px;height:20px}
+.res b{display:block;font-size:15.5px}
+.res small{color:var(--muted);font-size:13px}
+.res .star{font-family:var(--mono);font-size:12px;color:var(--red)}
+.config{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:48px}
+.cfg{padding:26px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);position:relative;overflow:hidden}
+.cfg .num{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--red);text-transform:uppercase}
+.cfg h3{margin-top:12px;font-size:21px;font-stretch:108%}
+.cfg p{margin-top:8px;color:var(--muted);font-size:15.5px}
+.cfg .ic{position:absolute;right:18px;top:18px;width:44px;height:44px;border-radius:12px;background:var(--rose);display:grid;place-items:center;color:var(--red)}
+.cfg .ic svg{width:22px;height:22px}
+.digital{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media (max-width:900px){.digital{grid-template-columns:1fr}.config{grid-template-columns:1fr}}
+
+/* ---------- Redes y pauta: test tubes ---------- */
+.mix{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.tubes{display:flex;justify-content:center;gap:clamp(18px,4vw,44px);align-items:flex-start;padding:30px 10px 0}
+.tube{display:flex;flex-direction:column;align-items:center;gap:14px;width:min(120px,26vw)}
+.tube .glass{position:relative;width:100%;height:300px;border:2px solid rgba(255,255,255,.35);border-top:0;border-radius:0 0 999px 999px;background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.02) 40%,rgba(255,255,255,.12));overflow:hidden}
+.tube .glass::before{content:"";position:absolute;left:-6px;right:-6px;top:0;height:10px;border:2px solid rgba(255,255,255,.35);border-radius:6px;background:var(--ink)}
+.tube .liquid{position:absolute;left:0;right:0;bottom:0;height:0;background:linear-gradient(180deg,var(--c1),var(--c2));transition:height 1.6s var(--ease)}
+.tube .liquid::before{content:"";position:absolute;left:-10%;right:-10%;top:-8px;height:16px;border-radius:50%;background:var(--c1);filter:brightness(1.15)}
+.tube .liquid::after{content:"";position:absolute;left:14%;top:20%;width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);box-shadow:20px 40px 0 -1px rgba(255,255,255,.4),50px 110px 0 0 rgba(255,255,255,.35),10px 160px 0 -2px rgba(255,255,255,.4);animation:bubbles 5s linear infinite}
+@keyframes bubbles{from{transform:translateY(60px);opacity:0}30%{opacity:1}to{transform:translateY(-60px);opacity:0}}
+.tube .pct{font-family:var(--display);font-stretch:115%;font-weight:900;font-size:34px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.tube .nm{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.7);text-align:center}
+.tube.t1{--c1:#ff6a5f;--c2:#EC3025}.tube.t2{--c1:#EC3025;--c2:#B4160F}.tube.t3{--c1:#c21d15;--c2:#6e0b07}
+.scale{position:absolute;left:-26px;top:0;bottom:0;width:20px;font-family:var(--mono);font-size:9px;color:rgba(255,255,255,.4)}
+.mixlist{display:grid;gap:14px}
+.mixlist .item{grid-template-columns:44px 1fr}
+.mixlist .item .ic{width:44px;height:44px;border-radius:12px}
+.mixlist .item .ic svg{width:20px;height:20px}
+.why{margin-top:22px;padding:18px 22px;border-left:3px solid var(--red);color:rgba(255,255,255,.75);font-size:15.5px}
+.why b{color:#fff}
+@media (max-width:900px){.mix{grid-template-columns:1fr}.tube .glass{height:220px}}
+
+/* ---------- Medios tradicionales ---------- */
+.media{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.route{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative;overflow:hidden}
+.route .bb{aspect-ratio:16/9;border-radius:12px;overflow:hidden;position:relative}
+.route .bb img{width:100%;height:100%;object-fit:cover}
+.route .bb .cap{position:absolute;left:14px;bottom:14px;color:#fff;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.5);padding:8px 10px;border-radius:6px}
+.route .path{margin-top:22px;position:relative;height:78px}
+.route .path .line{position:absolute;left:0;right:0;bottom:12px;height:4px;background:var(--line);border-radius:2px}
+.route .path .fill{position:absolute;left:0;bottom:12px;height:4px;width:0;background:var(--red);border-radius:2px;transition:width 2.2s var(--ease)}
+.route .path .car{position:absolute;bottom:3px;left:0;transform:translate(-50%,0);width:22px;height:22px;border-radius:50%;background:var(--red);box-shadow:0 0 0 6px rgba(236,48,37,.2);transition:left 2.2s var(--ease)}
+.route .path .a,.route .path .b{position:absolute;top:0;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.route .path .b{right:0}
+.route .path .a b,.route .path .b b{display:block;color:var(--text);font-size:13px}
+.route .path .a{left:0}
+.route.in .fill{width:100%}.route.in .car{left:100%}
+.periods{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.periods span{padding:7px 12px;border-radius:8px;background:var(--rose);color:var(--red-deep);font-family:var(--mono);font-size:11.5px;letter-spacing:.08em}
+.medialist{display:grid;gap:12px}
+.mrow{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:18px 20px;border-radius:14px;background:var(--paper);border:1px solid var(--line);transition:border-color .2s,transform .25s var(--ease)}
+.mrow:hover{border-color:var(--red);transform:translateX(4px)}
+.mrow .ic{width:46px;height:46px;border-radius:12px;background:var(--rose);color:var(--red);display:grid;place-items:center}
+.mrow .ic svg{width:22px;height:22px}
+.mrow h3{font-size:18px;font-stretch:108%}
+.mrow p{margin-top:4px;color:var(--muted);font-size:15px}
+.note{margin-top:18px;padding:16px 20px;border-radius:12px;background:var(--rose);color:var(--red-deep);font-size:15px;display:flex;gap:12px;align-items:flex-start}
+.note svg{width:20px;height:20px;flex:none;margin-top:2px}
+@media (max-width:900px){.media{grid-template-columns:1fr}}
+
+/* ---------- Roadmap ---------- */
+.phases{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.phases::before{content:"";position:absolute;left:5%;right:5%;top:34px;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.3) 0 8px,transparent 8px 14px)}
+.phase{position:relative;padding:0 0 0 0;cursor:pointer;text-align:left;background:none;border:0;color:inherit}
+.phase .node{width:68px;height:68px;border-radius:50%;background:var(--ink);border:2px solid rgba(255,255,255,.35);display:grid;place-items:center;font-family:var(--display);font-stretch:112%;font-weight:900;font-size:24px;transition:all .3s var(--ease);position:relative;z-index:1}
+.phase{display:flex;flex-direction:column}.phase .body{margin-top:18px;padding:24px;border-radius:var(--r);background:rgba(255,255,255,.04);border:1px solid var(--line-dark);transition:all .3s var(--ease);flex:1;display:flex;flex-direction:column}
+.phase .m{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+.phase h3{margin-top:8px;font-size:21px;font-stretch:108%}
+.phase ul{margin:14px 0 18px;padding:0;list-style:none;display:grid;gap:8px;color:rgba(255,255,255,.78);font-size:15px}
+.phase li{display:flex;gap:10px;align-items:flex-start}
+.phase li::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--red);margin-top:8px}
+.phase.on .node,.phase:hover .node{background:var(--red);border-color:var(--red);box-shadow:0 0 0 10px rgba(236,48,37,.18)}
+.phase.on .body,.phase:hover .body{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.25);transform:translateY(-4px)}
+.phase .prog{margin-top:auto;height:4px;border-radius:2px;background:rgba(255,255,255,.12);overflow:hidden}
+.phase .prog i{display:block;height:100%;width:0;background:var(--red);transition:width 1.4s var(--ease)}
+.phase.on .prog i{width:var(--w)}
+@media (max-width:900px){.phases{grid-template-columns:1fr}.phases::before{display:none}}
+
+/* ---------- Casos ---------- */
+.cases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.case{display:block;text-decoration:none;padding:26px 24px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s,border-color .3s}
+.case:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(24,11,13,.35);border-color:var(--red)}
+.case .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.case h3{margin-top:26px;font-size:20px;font-stretch:108%;min-height:2.2em}
+.case .url{margin-top:16px;display:inline-flex;align-items:center;gap:8px;color:var(--red);font-weight:600;font-size:14px}
+.case .url svg{width:14px;height:14px;transition:transform .3s}
+.case:hover .url svg{transform:translate(3px,-3px)}
+.case::before{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:var(--rose);transition:transform .4s var(--ease)}
+.case:hover::before{transform:scale(1.6)}
+.case .k,.case h3,.case .url{position:relative}
+@media (max-width:900px){.cases{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.cases{grid-template-columns:1fr}}
+
+/* ---------- Inversión ---------- */
+.invest{display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:start}
+.tablewrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--line);background:var(--paper)}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:left;padding:16px 18px;background:var(--red);color:#fff;font-weight:600}
+td{padding:18px;border-top:1px solid var(--line);vertical-align:top;font-size:15.5px}
+td.cat{font-weight:700;font-family:var(--display);font-stretch:106%;letter-spacing:-.01em;font-size:16px}
+td .sub{display:block;color:var(--muted);font-size:13.5px;margin-top:4px}
+td.val{font-family:var(--mono);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--red-deep)}
+tr.sel td{background:#fffaf9}
+.check{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:6px;border:2px solid var(--line);vertical-align:middle;margin-right:10px;cursor:pointer;position:relative;top:-1px}
+.check input{position:absolute;opacity:0;inset:0;cursor:pointer;margin:0}
+.check svg{width:14px;height:14px;opacity:0;color:#fff}
+.check.on{background:var(--red);border-color:var(--red)}
+.check.on svg{opacity:1}
+.calc{position:sticky;top:96px;padding:28px;border-radius:var(--r);background:var(--ink);color:#fff}
+.calc .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.calc .big{margin-top:6px;font-family:var(--display);font-stretch:112%;font-weight:900;font-size:clamp(30px,3vw,42px);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.calc .big small{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.06em;opacity:.7;margin-left:6px}
+.calc .row{padding:18px 0;border-top:1px solid var(--line-dark)}
+.calc .row:first-of-type{border-top:0;padding-top:0}
+.calc .hint{margin-top:14px;font-size:13.5px;color:rgba(255,255,255,.6)}
+.calc .hint b{color:#fff}
+.calc .loc{margin-top:18px;display:flex;align-items:center;gap:14px;padding:16px;border-radius:12px;background:rgba(236,48,37,.15);border:1px solid rgba(236,48,37,.35)}
+.calc .loc .n{font-family:var(--display);font-stretch:115%;font-weight:900;font-size:40px;letter-spacing:-.03em;color:var(--red)}
+.calc .loc .t{font-size:13.5px;color:rgba(255,255,255,.8)}
+.calc .loc .t b{display:block;color:#fff;font-size:14.5px}
+.fine{margin-top:14px;font-size:13.5px;color:var(--muted)}
+@media (max-width:960px){.invest{grid-template-columns:1fr}.calc{position:static}}
+
+/* ---------- Próximos pasos ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.step{padding:26px 24px;border-radius:var(--r);background:var(--paper);border:1px solid var(--line);position:relative;transition:transform .3s var(--ease),box-shadow .3s}
+.step:hover{transform:translateY(-6px);box-shadow:0 30px 50px -30px rgba(24,11,13,.35)}
+.step .n{width:44px;height:44px;border-radius:12px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--display);font-stretch:112%;font-weight:900;font-size:18px}
+.step h3{margin-top:20px;font-size:20px;font-stretch:108%}
+.step p{margin-top:8px;color:var(--muted);font-size:15px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* ---------- CTA ---------- */
+.cta-sec{position:relative;overflow:hidden;background:var(--ink);color:#fff}
+.cta-sec .bg{position:absolute;inset:0;background:url(assets/handshake.jpg) center/cover;opacity:.18;filter:grayscale(.3) contrast(1.1)}
+.cta-sec .fade{position:absolute;inset:0;background:linear-gradient(180deg,var(--ink),rgba(24,11,13,.5) 40%,var(--ink))}
+.cta-sec .wrap{position:relative;text-align:center;padding-top:20px;padding-bottom:20px}
+.cta-sec h2{font-size:clamp(36px,5.5vw,72px);font-stretch:118%;font-weight:900;letter-spacing:-.03em;max-width:none;margin:0 auto}
+.cta-sec h2 em{font-style:normal;color:var(--red)}
+.cta-sec .lead{margin:20px auto 0;text-align:center}
+.card-contact{margin:44px auto 0;max-width:520px;padding:32px;border-radius:24px;background:#fff;color:var(--text);box-shadow:0 40px 90px -40px rgba(0,0,0,.8)}
+.card-contact .who{font-family:var(--display);font-stretch:110%;font-weight:800;font-size:24px}
+.card-contact .role{margin-top:4px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.card-contact .links{margin-top:20px;display:grid;gap:10px}
+.card-contact .links a{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;background:var(--porcelain);border:1px solid var(--line);text-decoration:none;font-weight:600;transition:all .2s}
+.card-contact .links a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.card-contact .links svg{width:18px;height:18px;flex:none}
+.cta-logos{margin-top:44px;display:inline-flex;align-items:center;gap:32px;padding:18px 28px;background:#fff;border-radius:16px}
+.cta-logos img{height:40px;width:auto}
+.cta-logos img.arroba{height:48px}
+footer{background:var(--ink);color:rgba(255,255,255,.55);padding:26px 0;border-top:1px solid var(--line-dark);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer .mono{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+
+/* section image side strips (decor) */
+.strip{position:absolute;inset:0 0 0 auto;width:38%;background:center/cover;opacity:.08;pointer-events:none;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+@media (max-width:900px){.strip{display:none}}
+
+/* keyboard hint */
+.kbd{position:fixed;left:22px;bottom:18px;z-index:45;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;color:var(--muted);display:flex;gap:8px;align-items:center;opacity:.8}
+.kbd span{padding:3px 7px;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--text)}
+.on-dark .kbd{color:rgba(255,255,255,.6)}.on-dark .kbd span{background:rgba(255,255,255,.08);border-color:var(--line-dark);color:#fff}
+@media (max-width:1100px){.kbd{display:none}}
+</style>
+</head>
+<body>
+<div id="progress" role="presentation"></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#inicio"><img src="assets/logo-villa-ana.png" alt="Laboratorio Villa Ana"> <span>Villa Ana · 360°</span></a>
+  <nav aria-label="Secciones">
+    <ul>
+      <li><a href="#quienes">Quiénes somos</a></li>
+      <li><a href="#cliente">Villa Ana</a></li>
+      <li><a href="#produccion">Producción</a></li>
+      <li><a href="#digital">Digital</a></li>
+      <li><a href="#medios">Medios</a></li>
+      <li><a href="#fases">Fases</a></li>
+      <li><a href="#casos">Casos</a></li>
+      <li><a href="#inversion">Inversión</a></li>
+    </ul>
+  </nav>
+  <a class="cta" href="#contacto">Hablemos</a>
+</header>
+
+<nav class="rail" aria-label="Índice de la presentación">
+  <a href="#inicio" data-s="inicio"><span>Inicio</span><i></i></a>
+  <a href="#quienes" data-s="quienes"><span>Quiénes somos</span><i></i></a>
+  <a href="#cliente" data-s="cliente"><span>Villa Ana</span><i></i></a>
+  <a href="#produccion" data-s="produccion"><span>Producción</span><i></i></a>
+  <a href="#digital" data-s="digital"><span>Digital</span><i></i></a>
+  <a href="#redes" data-s="redes"><span>Redes y pauta</span><i></i></a>
+  <a href="#medios" data-s="medios"><span>Medios</span><i></i></a>
+  <a href="#fases" data-s="fases"><span>Hoja de ruta</span><i></i></a>
+  <a href="#casos" data-s="casos"><span>Casos de éxito</span><i></i></a>
+  <a href="#inversion" data-s="inversion"><span>Inversión</span><i></i></a>
+  <a href="#pasos" data-s="pasos"><span>Próximos pasos</span><i></i></a>
+  <a href="#contacto" data-s="contacto"><span>Contacto</span><i></i></a>
+</nav>
+<div class="kbd" aria-hidden="true"><span>↑</span><span>↓</span> navegar secciones</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio" data-dark>
+  <canvas id="mol" aria-hidden="true"></canvas>
+  <div class="glow"></div><div class="glow2"></div>
+  <div class="wrap">
+    <div>
+      <span class="kicker"><i></i> Propuesta 2026 · Laboratorio Clínico Villa Ana</span>
+      <h1>Estrategia Integral de Comunicación y <em>Posicionamiento 360°</em></h1>
+      <p class="sub">Conectando la excelencia de sus 17 localidades con una estrategia publicitaria y digital unificada.</p>
+      <div class="actions">
+        <a class="btn btn-red" href="#quienes">Explorar la propuesta
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg></a>
+        <a class="btn btn-ghost" href="#fases">Ver hoja de ruta</a>
+      </div>
+      <div class="partners">
+        <span>Presentado por</span>
+        <div class="logos">
+          <img src="assets/logo-mamery.png" alt="Grupo Mamery">
+          <img src="assets/logo-spotonhold.png" alt="Spot on Hold">
+          <img class="arroba" src="assets/logo-arroba.png" alt="Arroba">
+        </div>
+      </div>
+    </div>
+    <div class="plate-wrap">
+      <div class="ring a"></div><div class="ring b"></div>
+      <div class="plate">
+        <span class="corner">LVA · 17 / 07</span>
+        <img src="assets/logo-villa-ana.png" alt="Logo de Laboratorio Villa Ana">
+        <span class="tag"><b>Muestra 00</b> · identidad de marca</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat rv"><div class="n" data-count="17">0</div><div class="l">Localidades</div></div>
+    <div class="stat rv d1"><div class="n" data-count="7">0</div><div class="l">Municipios · Este y Centro</div></div>
+    <div class="stat rv d2"><div class="n"><span data-count="40">0</span><sup>+</sup></div><div class="l">Años en medios en PR</div></div>
+    <div class="stat rv d3"><div class="n" data-count="3">0</div><div class="l">Fases de implementación</div></div>
+  </div>
+</div>
+
+<!-- ================= QUIÉNES SOMOS ================= -->
+<section class="block graph" id="quienes">
+  <div class="wrap">
+    <div class="eyebrow rv"><b>Muestra 01</b><span class="bar"></span>¿Quiénes somos?</div>
+    <div class="origin">
+      <div class="rv">
+        <h2 class="h2">Un solo centro estratégico: nuestra trayectoria</h2>
+        <p class="lead">Más de 40 años de evolución constante en los medios de comunicación en Puerto Rico, con raíces en la industria radial desde Radio ÚTIL en Mayagüez.</p>
+        <div class="timeline-mini"><span class="dot"></span><span>Radio ÚTIL · Mayagüez</span><span class="ln"></span><span>Grupo Mamery</span><span class="ln"></span><span>Arroba</span><span class="ln"></span><span>Spot on Hold</span></div>
+      </div>
+      <div class="photo rv d1"><img src="assets/meeting.jpg" alt="Equipo estratégico en reunión de trabajo"><div class="stamp"><b>+40</b>años en medios</div></div>
+    </div>
+
+    <div class="agencies">
+      <article class="agency mamery rv">
+        <div class="logo"><img src="assets/logo-mamery.png" alt="Grupo Mamery"></div>
+        <h3>Grupo Mamery</h3>
+        <p>Estrategia publicitaria, compra de medios tradicionales y producción audiovisual masiva, entre otros.</p>
+        <div class="role">Publicidad · Medios · Producción</div>
+      </article>
+      <article class="agency arroba rv d1">
+        <div class="logo"><img src="assets/logo-arroba.png" alt="Arroba" style="max-height:64px"></div>
+        <h3>Arroba</h3>
+        <p>Estrategia digital, desarrollo web y campañas de rendimiento online y más.</p>
+        <div class="role">Digital · Web · Performance</div>
+      </article>
+      <article class="agency soh rv d2">
+        <div class="logo"><img src="assets/logo-spotonhold.png" alt="Spot on Hold"></div>
+        <h3>Spot on Hold</h3>
+        <p>Comunicación empresarial, audio corporativo y experiencia telefónica del cliente.</p>
+        <div class="role">Audio corporativo · Experiencia telefónica</div>
+      </article>
+    </div>
+
+    <div class="ventaja rv">
+      <div class="bolt"><svg viewBox="0 0 24 24" fill="#fff"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></div>
+      <p><b>Ventaja clave:</b> una sola coordinación, resultados coherentes en todas sus plataformas y medios de comunicación.</p>
+    </div>
+
+    <div class="videos rv" id="videos">
+      <div class="frame">
+        <img src="assets/studio.jpg" alt="Set de producción audiovisual">
+        <span class="lbl">Algunos de nuestros clientes</span>
+        <a href="https://drive.google.com/file/d/18BgDMODtoCinN4zZOy1ZxrFGLRfyuRCM/view?usp=drive_link" target="_blank" rel="noopener" aria-label="Ver video institucional de Grupo Mamery">
+          <span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span>
+        </a>
+      </div>
+      <div>
+        <h3>Video institucional · Grupo Mamery</h3>
+        <p>Una muestra del nivel de producción audiovisual que respalda esta propuesta: dirección, fotografía profesional y locución para marcas en Puerto Rico.</p>
+        <span class="soon">▶ Más videos institucionales próximamente en esta página</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CLIENTE ================= -->
+<section class="block" id="cliente" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 02</b><span class="bar"></span>El cliente</div>
+        <h2 class="h2">Laboratorio Villa Ana</h2>
+      </div>
+      <p class="lead rv d1">Cobertura amplia a través de <b>17 localidades en 7 municipios</b> del área Este y Central de Puerto Rico.</p>
+    </div>
+    <div class="cover">
+      <div class="map rv">
+        <svg viewBox="0 0 640 300" role="img" aria-label="Esquema de los 7 municipios cubiertos por Laboratorio Villa Ana">
+          <defs><pattern id="gp" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0v20" fill="none" stroke="#EC3025" stroke-opacity=".08"/></pattern></defs>
+          <rect width="640" height="300" fill="url(#gp)" rx="12"/>
+          <path id="rt" d="M70 200 C 140 120, 200 120, 260 150 S 380 210, 440 150 S 560 90, 600 120" fill="none" stroke="#E9DDDB" stroke-width="3" stroke-dasharray="6 6"/>
+          <path d="M70 200 C 140 120, 200 120, 260 150 S 380 210, 440 150 S 560 90, 600 120" fill="none" stroke="#EC3025" stroke-width="3" class="rtfill" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/>
+          <g class="pins" font-family="JetBrains Mono, monospace" font-size="10" fill="#6E6062" text-anchor="middle">
+            <g data-m="AGUAS BUENAS" transform="translate(70 200)"><circle r="9" fill="#EC3025"/><circle r="4" fill="#fff"/><text y="28">AGUAS BUENAS</text></g>
+            <g data-m="CAGUAS" transform="translate(150 140)"><circle r="9" fill="#EC3025"/><circle r="4" fill="#fff"/><text y="-16">CAGUAS</text></g>
+            <g data-m="GURABO" transform="translate(235 138)"><circle r="9" fill="#EC3025"/><circle r="4" fill="#fff"/><text y="-16">GURABO</text></g>
+            <g data-m="JUNCOS" transform="translate(320 172)"><circle r="9" fill="#EC3025"/><circle r="4" fill="#fff"/><text y="30">JUNCOS</text></g>
+            <g data-m="CANÓVANAS" transform="translate(400 120)"><circle r="9" fill="#EC3025"/><circle r="4" fill="#fff"/><text y="-16">CANÓVANAS</text></g>
+            <g data-m="NAGUABO" transform="translate(500 178)"><circle r="9" fill="#EC3025"/><circle r="4" fill="#fff"/><text y="30">NAGUABO</text></g>
+            <g data-m="HUMACAO" transform="translate(600 120)"><circle r="9" fill="#EC3025"/><circle r="4" fill="#fff"/><text y="-16">HUMACAO</text></g>
+          </g>
+          <text x="20" y="284" font-family="JetBrains Mono, monospace" font-size="10" fill="#6E6062" letter-spacing="1.5">ÁREA ESTE Y CENTRAL · PUERTO RICO · 17 LOCALIDADES</text>
+        </svg>
+        <div class="chips" role="list">
+          <button class="chip" type="button" data-m="AGUAS BUENAS">Aguas Buenas</button>
+          <button class="chip" type="button" data-m="CAGUAS">Caguas</button>
+          <button class="chip" type="button" data-m="GURABO">Gurabo</button>
+          <button class="chip" type="button" data-m="JUNCOS">Juncos</button>
+          <button class="chip" type="button" data-m="CANÓVANAS">Canóvanas</button>
+          <button class="chip" type="button" data-m="NAGUABO">Naguabo</button>
+          <button class="chip" type="button" data-m="HUMACAO">Humacao</button>
+        </div>
+        <div class="info" id="mapinfo">Toca un municipio para resaltarlo en la ruta. Las 17 localidades se cubren en <b>4 rutas estratégicas</b> de producción.</div>
+      </div>
+      <div class="two">
+        <div class="panel rv d1">
+          <div class="k">El desafío</div>
+          <h3>Ser encontrados al instante</h3>
+          <p>Lograr que cada laboratorio sea fácilmente localizado en búsquedas digitales inmediatas, mientras se construye una marca robusta a nivel institucional.</p>
+        </div>
+        <div class="panel red rv d2">
+          <div class="k">Nuestra propuesta</div>
+          <h3>Un ecosistema completo</h3>
+          <p>Construir un ecosistema que combine infraestructura digital sólida, contenido audiovisual de alta calidad y pauta local estratégica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRODUCCIÓN ================= -->
+<section class="block dark" id="produccion" data-dark>
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 03</b><span class="bar"></span>Producción audiovisual</div>
+        <h2 class="h2">Producción audiovisual e imagen institucional</h2>
+      </div>
+      <p class="lead rv d1">Un solo activo visual de alta calidad que alimenta cada canal de la estrategia.</p>
+    </div>
+    <div class="prod">
+      <div class="photo rv">
+        <img src="assets/camera.jpg" alt="Director de fotografía operando cámara de cine">
+        <div class="rec"><i></i> REC · 4K · DRONE</div>
+        <div class="fmt"><span>16:9 WEB · TV</span><span>9:16 SOCIAL</span></div>
+      </div>
+      <div class="list">
+        <div class="item rv d1">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <div><h3>Sesiones fotográficas</h3><p>4 rutas estratégicas cubriendo las 17 localidades: Aguas Buenas, Caguas, Gurabo, Juncos, Canóvanas, Naguabo y Humacao.</p></div>
+        </div>
+        <div class="item rv d2">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+          <div><h3>Video institucional (1:00 a 1:30 min)</h3><p>Drone + cámara profesional en localización principal, participación del personal y locución profesional o de su equipo.</p></div>
+        </div>
+        <div class="item rv d3">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div><h3>Entregables multiplataforma</h3><p>Versión horizontal para web, YouTube y TV. Versión vertical optimizada para redes sociales.</p></div>
+        </div>
+        <div class="item rv d4">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20M4.9 4.9l14.2 14.2M19.1 4.9 4.9 19.1"/></svg></div>
+          <div><h3>Aprovecha el total del activo</h3><p>Este material alimentará la página web, Google Ads, YouTube, redes sociales, TV y/o billboards.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DIGITAL ================= -->
+<section class="block graph" id="digital">
+  <div class="strip" style="background-image:url(assets/phone.jpg)"></div>
+  <div class="wrap">
+    <div class="eyebrow rv"><b>Muestra 04</b><span class="bar"></span>Infraestructura digital</div>
+    <div class="digital">
+      <div class="rv">
+        <h2 class="h2">Búsqueda local y presencia digital en la web</h2>
+        <p class="lead">Cuando un paciente busca <b>"laboratorio cerca de mí"</b>, las 17 localidades de Villa Ana deben aparecer primero. Esta es la base de toda la estrategia.</p>
+      </div>
+      <div class="search-demo rv d1" id="searchdemo">
+        <div class="bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="q" id="typed"></span></div>
+        <div class="results">
+          <div class="res"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Laboratorio Villa Ana · Caguas</b><small>Abierto ahora · Citas online · 0.8 mi</small></div><span class="star">★ 4.9</span></div>
+          <div class="res"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Laboratorio Villa Ana · Gurabo</b><small>Abierto ahora · Citas online · 2.1 mi</small></div><span class="star">★ 4.9</span></div>
+          <div class="res"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><b>Laboratorio Villa Ana · Juncos</b><small>Abierto ahora · Citas online · 3.4 mi</small></div><span class="star">★ 4.8</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="eyebrow rv" style="margin-top:56px;margin-bottom:0"><b>Configuración inicial</b></div>
+    <div class="config" style="margin-top:18px">
+      <div class="cfg rv">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+        <div class="num">01 · Web</div>
+        <h3>Página web corporativa</h3>
+        <p>5 subpáginas + SEO + Google Business (GMB) para la 1ª localidad.</p>
+      </div>
+      <div class="cfg rv d1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <div class="num">02 · Citas</div>
+        <h3>Sistema de citas online</h3>
+        <p>Calendario unificado para todas las sedes.</p>
+      </div>
+      <div class="cfg rv d2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="num">03 · Google Business</div>
+        <h3>Setup GMB 16 localidades</h3>
+        <p>Perfiles de Google Business para las 16 localidades restantes, para dominar el mapa local.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REDES Y PAUTA ================= -->
+<section class="block dark" id="redes" data-dark>
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 05</b><span class="bar"></span>Redes sociales y pauta digital</div>
+        <h2 class="h2">Manejo de redes sociales y pauta digital</h2>
+      </div>
+      <p class="lead rv d1">Distribución del ad spend sugerido: cada dólar ataca un punto crítico del embudo del laboratorio.</p>
+    </div>
+    <div class="mix">
+      <div class="tubes rv" id="tubes" aria-label="Distribución de ad spend: Meta Ads 25%, Google Ads y Display 30%, YouTube y Programmatic 45%">
+        <div class="tube t1"><div class="pct" data-pct="25">0%</div><div class="glass"><div class="liquid" data-h="25"></div></div><div class="nm">Meta Ads</div></div>
+        <div class="tube t2"><div class="pct" data-pct="30">0%</div><div class="glass"><div class="liquid" data-h="30"></div></div><div class="nm">Google Ads<br>&amp; Display</div></div>
+        <div class="tube t3"><div class="pct" data-pct="45">0%</div><div class="glass"><div class="liquid" data-h="45"></div></div><div class="nm">YouTube &amp;<br>Programmatic</div></div>
+      </div>
+      <div>
+        <div class="mixlist">
+          <div class="item rv d1">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></div>
+            <div><h3>Manejo integral de redes</h3><p>Contenido educativo para las 17 localidades. Posiciona al laboratorio como autoridad en salud.</p></div>
+          </div>
+          <div class="item rv d2">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+            <div><h3>Google Ads &amp; Display</h3><p>Captura búsquedas directas de pacientes con necesidades inmediatas de diagnóstico.</p></div>
+          </div>
+          <div class="item rv d3">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div>
+            <div><h3>YouTube &amp; Programmatic</h3><p>Aprovecha el video institucional para anuncios altamente segmentados y de alto impacto.</p></div>
+          </div>
+        </div>
+        <div class="why rv d4"><b>¿Por qué este mix?</b> Cada dólar ataca un punto crítico del embudo del laboratorio: desde que el paciente descubre el laboratorio hasta que agenda su cita.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MEDIOS TRADICIONALES ================= -->
+<section class="block" id="medios" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 06</b><span class="bar"></span>Medios tradicionales y exterior</div>
+        <h2 class="h2">Medios tradicionales y publicidad exterior</h2>
+      </div>
+      <p class="lead rv d1">Dominio de marca a nivel regional con presencia masiva y gran alcance.</p>
+    </div>
+    <div class="media">
+      <div class="route rv" id="route">
+        <div class="bb"><img src="assets/billboard.jpg" alt="Billboard en carretera al atardecer"><span class="cap">Publicidad exterior · Billboards</span></div>
+        <div class="path">
+          <div class="a">Inicio<b>Aguas Buenas</b></div>
+          <div class="b">Destino<b>Fajardo</b></div>
+          <div class="line"></div><div class="fill"></div><div class="car"></div>
+        </div>
+        <p style="color:var(--muted);font-size:15px">Ruta estratégica Aguas Buenas → Fajardo. Alta visibilidad vehicular cerca de accesos a los laboratorios.</p>
+        <div class="periods"><span>6 MESES</span><span>8 MESES</span><span>12 MESES</span></div>
+      </div>
+      <div>
+        <div class="medialist">
+          <div class="mrow rv d1">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M6 7l12-4M7 12h.01M11 12h6M7 16h.01M11 16h6"/></svg></div>
+            <div><h3>Radio tradicional</h3><p>15 días/mes, spots de 15 seg en 3 emisoras AM/FM. Cobertura Área Metro con alcance hacia la región Este.</p></div>
+          </div>
+          <div class="mrow rv d2">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M8 22h8M12 19v3"/></svg></div>
+            <div><h3>Televisión local</h3><p>15 días/mes, spots corporativos de 15 seg en canales de cobertura regional.</p></div>
+          </div>
+          <div class="mrow rv d3">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></svg></div>
+            <div><h3>Prensa y/o revista local</h3><p>Presencia impresa regional para reforzar la marca institucional.</p></div>
+          </div>
+          <div class="mrow rv d4">
+            <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.3L18 20l-6-3-6 3 1.5-6.7L3 9l6-1z"/></svg></div>
+            <div><h3>Actividades y/o auspicios locales</h3><p>Ferias de salud, aperturas y eventos comunitarios en los municipios servidos.</p></div>
+          </div>
+        </div>
+        <div class="note rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5M12 16h.01"/></svg><span>Todas las recomendaciones se ajustan al presupuesto disponible del cliente. Nos adaptamos para maximizar la exposición.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOJA DE RUTA ================= -->
+<section class="block dark" id="fases" data-dark>
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 07</b><span class="bar"></span>Hoja de ruta</div>
+        <h2 class="h2">Hoja de ruta de implementación por fases</h2>
+      </div>
+      <p class="lead rv d1">Un plan escalonado que construye sobre cada fase para maximizar el retorno de inversión en las 17 localidades de Villa Ana. Toca cada fase para explorarla.</p>
+    </div>
+    <div class="phases" id="phases">
+      <button class="phase on rv" type="button" style="--w:33%">
+        <div class="node">1</div>
+        <div class="body">
+          <div class="m">Mes 1 al 2</div>
+          <h3>Fundamentos e infraestructura</h3>
+          <ul>
+            <li>Producción fotográfica y video institucional</li>
+            <li>Rediseño web + sistema de citas + correos corporativos</li>
+            <li>Configuración GMB 17 localidades</li>
+          </ul>
+          <div class="prog"><i></i></div>
+        </div>
+      </button>
+      <button class="phase rv d1" type="button" style="--w:66%">
+        <div class="node">2</div>
+        <div class="body">
+          <div class="m">Meses 3 al 5</div>
+          <h3>Captación local y tráfico directo</h3>
+          <ul>
+            <li>Activación redes sociales + Meta Ads</li>
+            <li>Google Búsqueda y Display</li>
+            <li>Publicidad exterior en billboards estratégicos</li>
+          </ul>
+          <div class="prog"><i></i></div>
+        </div>
+      </button>
+      <button class="phase rv d2" type="button" style="--w:100%">
+        <div class="node">3</div>
+        <div class="body">
+          <div class="m">Mes 6 en adelante</div>
+          <h3>Alcance masivo y cobertura</h3>
+          <ul>
+            <li>YouTube / Programmatic Ads</li>
+            <li>Integración progresiva radio y televisión</li>
+            <li>Publicidad tradicional (ferias de salud y aperturas)</li>
+          </ul>
+          <div class="prog"><i></i></div>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CASOS ================= -->
+<section class="block graph" id="casos">
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 08</b><span class="bar"></span>Experiencia en el sector salud</div>
+        <h2 class="h2">Casos de éxito en salud</h2>
+      </div>
+      <p class="lead rv d1">Nuestro historial con instituciones médicas y de laboratorio en Puerto Rico respalda nuestra propuesta.</p>
+    </div>
+    <div class="cases">
+      <a class="case rv" href="https://laboratorionbh.com" target="_blank" rel="noopener"><div class="k">Laboratorio clínico</div><h3>Laboratorio NBH</h3><span class="url">laboratorionbh.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      <a class="case rv d1" href="https://cossma.org" target="_blank" rel="noopener"><div class="k">Institución de salud</div><h3>COSSMA</h3><span class="url">cossma.org <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      <a class="case rv d2" href="https://labclinicomagdalena.com" target="_blank" rel="noopener"><div class="k">Laboratorio clínico</div><h3>Laboratorio Clínico Magdalena</h3><span class="url">labclinicomagdalena.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+      <a class="case rv d3" href="https://costasalud.com" target="_blank" rel="noopener"><div class="k">Institución de salud</div><h3>Costa Salud</h3><span class="url">costasalud.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INVERSIÓN ================= -->
+<section class="block" id="inversion" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 09</b><span class="bar"></span>Resumen de inversión</div>
+        <h2 class="h2">Resumen de inversión</h2>
+      </div>
+      <p class="lead rv d1">Valores preliminares con descuentos por volumen aplicados para 17 localidades. Costos finales según servicios y fases activadas. Marca o desmarca servicios para ver el estimado.</p>
+    </div>
+    <div class="invest">
+      <div class="rv">
+        <div class="tablewrap">
+          <table id="tbl">
+            <thead><tr><th>Categoría</th><th>Concepto</th><th style="text-align:right">Inversión estimada</th></tr></thead>
+            <tbody>
+              <tr class="sel" data-once="6000"><td class="cat"><label class="check on"><input type="checkbox" checked><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></label>Producción audiovisual</td><td>Fotos 17 localidades + video institucional con drone</td><td class="val" style="text-align:right">$6,000 <span class="sub">único</span></td></tr>
+              <tr class="sel" data-once="4150"><td class="cat"><label class="check on"><input type="checkbox" checked><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></label>Desarrollo digital inicial</td><td>Web ($1,950) + sistema de citas ($200) + setup GMB 16 localidades ($2,000)</td><td class="val" style="text-align:right">$4,150 <span class="sub">único</span></td></tr>
+              <tr class="sel" data-month="3036.25"><td class="cat"><label class="check on"><input type="checkbox" checked><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></label>Servicios recurrentes mensuales</td><td>Redes sociales ($950 mes) + mantenimiento web y correos ($975 anual) + GMB ($560 mes) + Google Display ($495 mes) + Google Programmatic ($950 mes)</td><td class="val" style="text-align:right">$3,036.25 <span class="sub">por mes</span></td></tr>
+              <tr class="sel" data-month="2000"><td class="cat"><label class="check on"><input type="checkbox" checked><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></label>Pauta digital sugerida (ad spend)</td><td>Meta ($500) + Google ($600) + YouTube/Programmatic ($900)</td><td class="val" style="text-align:right">$2,000 <span class="sub">por mes</span></td></tr>
+              <tr data-trad="1"><td class="cat"><label class="check"><input type="checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></label>Medios tradicionales / exterior</td><td>Billboards ($80 p/d) + radio ($7,000 mes) + prensa + auspicios + revistas + eventos + TV ($5,000 mes). <span class="sub">Presupuestos recomendados pueden variar.</span></td><td class="val" style="text-align:right">Según presupuesto <span class="sub">disponible</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="fine">Estimados preliminares. La cotización formal definitiva se emite al seleccionar las fases y servicios de interés.</p>
+      </div>
+      <aside class="calc rv d1" aria-live="polite">
+        <div class="row"><div class="k">Inversión inicial (único)</div><div class="big" id="once">$10,150</div></div>
+        <div class="row"><div class="k">Recurrente mensual</div><div class="big" id="month">$5,036.25<small>/ MES</small></div></div>
+        <div class="row"><div class="k">Medios tradicionales</div><div class="big" id="trad" style="font-size:22px;margin-top:10px">No incluidos</div><p class="hint" id="tradhint">Radio, TV, billboards, prensa y auspicios se cotizan <b>según el presupuesto disponible</b>.</p></div>
+        <div class="loc"><div class="n">17</div><div class="t"><b>Localidades cubiertas</b>Alcance completo en la región Este y Central de Puerto Rico</div></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRÓXIMOS PASOS ================= -->
+<section class="block graph" id="pasos">
+  <div class="wrap">
+    <div class="head">
+      <div class="rv">
+        <div class="eyebrow"><b>Muestra 10</b><span class="bar"></span>Próximos pasos</div>
+        <h2 class="h2">Construyamos el futuro de Villa Ana</h2>
+      </div>
+      <p class="lead rv d1">Cuatro pasos para pasar de la propuesta a la ejecución.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="n">1</div><h3>Ajustar el alcance</h3><p>Definir las prioridades inmediatas del laboratorio y los servicios de mayor impacto.</p></div>
+      <div class="step rv d1"><div class="n">2</div><h3>Seleccionar fases</h3><p>Elegir los servicios de interés para emitir la cotización formal definitiva.</p></div>
+      <div class="step rv d2"><div class="n">3</div><h3>Coordinar producción</h3><p>Establecer fechas para la ruta de fotos y filmación en las 17 localidades.</p></div>
+      <div class="step rv d3"><div class="n">4</div><h3>Formalizar e iniciar</h3><p>Firmar el plan de trabajo y arrancar la Fase 1 de inmediato.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<section class="block cta-sec" id="contacto" data-dark>
+  <div class="bg"></div><div class="fade"></div>
+  <div class="wrap">
+    <div class="eyebrow rv" style="justify-content:center;display:flex"><b>Muestra 11</b><span class="bar"></span>Contacto</div>
+    <h2 class="rv">¿Listo para transformar <em>Villa Ana</em>?</h2>
+    <p class="lead rv d1">Estamos preparados para convertirnos en su aliado estratégico e impulsar las 17 localidades de Laboratorio Clínico Villa Ana.</p>
+    <div class="card-contact rv d2">
+      <div class="who">Karitza Irizarry</div>
+      <div class="role">Spot on Hold · Grupo Mamery</div>
+      <div class="links">
+        <a href="mailto:kirizarry@spotonhold.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>kirizarry@spotonhold.com</a>
+        <a href="tel:+17877587272,700"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.7a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.7a2 2 0 0 1 1.9 2z"/></svg>787-758-7272 ext. 700</a>
+      </div>
+    </div>
+    <div class="cta-logos rv d3">
+      <img src="assets/logo-mamery.png" alt="Grupo Mamery">
+      <img src="assets/logo-spotonhold.png" alt="Spot on Hold">
+      <img class="arroba" src="assets/logo-arroba.png" alt="Arroba">
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <span class="mono">Propuesta preparada para Laboratorio Clínico Villa Ana · 2026</span>
+    <span>Grupo Mamery · Spot on Hold · Arroba</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Molecule network canvas (hero) ---- */
+  const cv = document.getElementById('mol');
+  if (cv && !reduce) {
+    const ctx = cv.getContext('2d');
+    let W,H,pts=[],mouse={x:-9999,y:-9999};
+    const N = () => Math.min(90, Math.floor(W*H/16000));
+    function size(){ W=cv.width=cv.offsetWidth*devicePixelRatio; H=cv.height=cv.offsetHeight*devicePixelRatio;
+      pts=Array.from({length:N()},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.25*devicePixelRatio,vy:(Math.random()-.5)*.25*devicePixelRatio,r:(1+Math.random()*2.2)*devicePixelRatio}));}
+    size(); addEventListener('resize',size);
+    cv.parentElement.addEventListener('pointermove',e=>{const b=cv.getBoundingClientRect();mouse.x=(e.clientX-b.left)*devicePixelRatio;mouse.y=(e.clientY-b.top)*devicePixelRatio;});
+    cv.parentElement.addEventListener('pointerleave',()=>{mouse.x=-9999;mouse.y=-9999;});
+    const link = 150*devicePixelRatio;
+    function frame(){
+      ctx.clearRect(0,0,W,H);
+      for(const p of pts){ p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>W)p.vx*=-1; if(p.y<0||p.y>H)p.vy*=-1;
+        const dx=p.x-mouse.x, dy=p.y-mouse.y, d=Math.hypot(dx,dy); if(d<220*devicePixelRatio){p.x+=dx/d*.6;p.y+=dy/d*.6;} }
+      for(let i=0;i<pts.length;i++){ for(let j=i+1;j<pts.length;j++){ const a=pts[i],b=pts[j],d=Math.hypot(a.x-b.x,a.y-b.y);
+        if(d<link){ ctx.strokeStyle=`rgba(236,48,37,${(1-d/link)*.45})`; ctx.lineWidth=devicePixelRatio; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); } } }
+      for(const p of pts){ ctx.fillStyle='rgba(255,255,255,.85)'; ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,7); ctx.fill();
+        ctx.fillStyle='rgba(236,48,37,.35)'; ctx.beginPath(); ctx.arc(p.x,p.y,p.r*3,0,7); ctx.fill(); }
+      requestAnimationFrame(frame);
+    }
+    frame();
+  }
+
+  /* ---- Nav solid + progress + active section ---- */
+  const nav=document.getElementById('nav'), prog=document.getElementById('progress');
+  const sections=[...document.querySelectorAll('section[id], .stats')];
+  const railLinks=[...document.querySelectorAll('.rail a')], navLinks=[...document.querySelectorAll('.nav li a')];
+  function onScroll(){
+    const y=scrollY, h=document.documentElement.scrollHeight-innerHeight;
+    prog.style.width=(h?y/h*100:0)+'%';
+    nav.classList.toggle('solid', y>40);
+    let cur=null;
+    for(const s of sections){ if(s.offsetTop-innerHeight*.45<=y) cur=s; }
+    const id=cur&&cur.id?cur.id:'inicio';
+    railLinks.forEach(a=>a.classList.toggle('on',a.dataset.s===id));
+    navLinks.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+id));
+    document.body.classList.toggle('on-dark', !!(cur&&cur.hasAttribute('data-dark')));
+  }
+  addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  /* ---- Keyboard section navigation ---- */
+  const order=['inicio','quienes','cliente','produccion','digital','redes','medios','fases','casos','inversion','pasos','contacto'];
+  addEventListener('keydown',e=>{
+    if(e.target.matches('input,textarea,button,a')) return;
+    if(e.key!=='ArrowDown'&&e.key!=='ArrowUp'&&e.key!=='PageDown'&&e.key!=='PageUp') return;
+    e.preventDefault();
+    const y=scrollY+8; let idx=0;
+    order.forEach((id,i)=>{const el=document.getElementById(id); if(el&&el.offsetTop<=y) idx=i;});
+    const next=(e.key==='ArrowDown'||e.key==='PageDown')?Math.min(order.length-1,idx+1):Math.max(0,idx-1);
+    document.getElementById(order[next]).scrollIntoView({behavior:reduce?'auto':'smooth'});
+  });
+
+  /* ---- Reveal on enter ---- */
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+  /* ---- Counters ---- */
+  const cio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return; cio.unobserve(e.target);
+    const el=e.target, to=+el.dataset.count, t0=performance.now(), dur=reduce?0:1400;
+    (function tick(t){const k=Math.min(1,(t-t0)/dur), v=Math.round(to*(1-Math.pow(1-k,3))); el.textContent=v; if(k<1)requestAnimationFrame(tick);})(t0);
+  })},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+  /* ---- Test tubes ---- */
+  const tubes=document.getElementById('tubes');
+  if(tubes){ const tio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return; tio.unobserve(tubes);
+    tubes.querySelectorAll('.liquid').forEach(l=>l.style.height=l.dataset.h*2+'%');
+    tubes.querySelectorAll('.pct').forEach(p=>{const to=+p.dataset.pct,t0=performance.now(),dur=reduce?0:1600;(function tick(t){const k=Math.min(1,(t-t0)/dur);p.textContent=Math.round(to*(1-Math.pow(1-k,3)))+'%';if(k<1)requestAnimationFrame(tick);})(t0);});
+  })},{threshold:.4}); tio.observe(tubes); }
+
+  /* ---- Route animation ---- */
+  const route=document.getElementById('route');
+  if(route){ const rio=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){route.classList.add('in');rio.unobserve(route);}})},{threshold:.4}); rio.observe(route); }
+
+  /* ---- Search demo typing ---- */
+  const typed=document.getElementById('typed'), demo=document.getElementById('searchdemo');
+  if(typed&&demo){
+    const text='laboratorio cerca de mí'; let started=false;
+    const sio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting||started)return; started=true; sio.unobserve(demo);
+      if(reduce){typed.textContent=text; demo.querySelectorAll('.res').forEach(r=>r.classList.add('show')); return;}
+      let i=0; (function type(){ typed.textContent=text.slice(0,++i); if(i<text.length) setTimeout(type,55+Math.random()*70);
+        else demo.querySelectorAll('.res').forEach((r,k)=>setTimeout(()=>r.classList.add('show'),350+k*220)); })();
+    })},{threshold:.5}); sio.observe(demo);
+  }
+
+  /* ---- Map chips ---- */
+  const info=document.getElementById('mapinfo');
+  const desc={
+    'AGUAS BUENAS':'<b>Aguas Buenas</b>: punto de partida de la ruta estratégica de billboards hacia Fajardo.',
+    'CAGUAS':'<b>Caguas</b>: centro urbano del área Este y Central; alta demanda de búsquedas locales.',
+    'GURABO':'<b>Gurabo</b>: municipio en crecimiento, conectado por la ruta de producción fotográfica.',
+    'JUNCOS':'<b>Juncos</b>: corredor Este; visibilidad vehicular cerca de accesos a los laboratorios.',
+    'CANÓVANAS':'<b>Canóvanas</b>: enlace hacia la región Noreste y el tráfico hacia Fajardo.',
+    'NAGUABO':'<b>Naguabo</b>: cobertura de la costa Este del laboratorio.',
+    'HUMACAO':'<b>Humacao</b>: polo regional del Este; presencia en radio y TV de cobertura regional.'
+  };
+  const chips=[...document.querySelectorAll('.chip')], pins=[...document.querySelectorAll('.pins g')];
+  const rt=document.querySelector('.rtfill');
+  function pick(m){
+    chips.forEach(c=>c.classList.toggle('on',c.dataset.m===m));
+    pins.forEach(g=>{const on=g.dataset.m===m; g.querySelector('circle').setAttribute('r',on?13:9); g.querySelector('text').setAttribute('fill',on?'#EC3025':'#6E6062'); g.querySelector('text').setAttribute('font-weight',on?'600':'400');});
+    if(info) info.innerHTML=desc[m]||'';
+  }
+  chips.forEach(c=>c.addEventListener('click',()=>pick(c.dataset.m)));
+  pins.forEach(g=>{g.style.cursor='pointer'; g.addEventListener('click',()=>pick(g.dataset.m));});
+  const map=document.querySelector('.map');
+  if(map&&rt){ const mio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return; mio.unobserve(map);
+    rt.style.transition=reduce?'none':'stroke-dashoffset 2.4s cubic-bezier(.2,.7,.2,1)'; requestAnimationFrame(()=>rt.style.strokeDashoffset='0');
+    if(!reduce){ let i=0; const cyc=setInterval(()=>{ if(chips.some(c=>c.matches(':hover'))||map.dataset.user) {clearInterval(cyc);return;} pick(chips[i%chips.length].dataset.m); i++; if(i>chips.length){clearInterval(cyc);} },700); chips.forEach(c=>c.addEventListener('click',()=>{map.dataset.user=1;clearInterval(cyc);})); }
+  })},{threshold:.4}); mio.observe(map); }
+
+  /* ---- Phases ---- */
+  const phases=[...document.querySelectorAll('.phase')];
+  phases.forEach(p=>p.addEventListener('click',()=>{phases.forEach(x=>x.classList.remove('on'));p.classList.add('on');}));
+  const pio=new IntersectionObserver(es=>{es.forEach(e=>{if(!e.isIntersecting)return; pio.unobserve(e.target); if(reduce)return;
+    let i=0; const iv=setInterval(()=>{ i++; if(i>=phases.length||document.getElementById('phases').dataset.user){clearInterval(iv);return;} phases.forEach(x=>x.classList.remove('on')); phases[i].classList.add('on'); },1800);
+    phases.forEach(p=>p.addEventListener('click',()=>{document.getElementById('phases').dataset.user=1;clearInterval(iv);}));
+  })},{threshold:.4}); const ph=document.getElementById('phases'); if(ph)pio.observe(ph);
+
+  /* ---- Investment calculator ---- */
+  const rows=[...document.querySelectorAll('#tbl tbody tr')];
+  const fmt=n=>'$'+n.toLocaleString('en-US',{minimumFractionDigits:(n%1?2:0),maximumFractionDigits:2});
+  function calc(){
+    let once=0,month=0,trad=false;
+    rows.forEach(r=>{const on=r.querySelector('input').checked; r.classList.toggle('sel',on); r.querySelector('.check').classList.toggle('on',on);
+      if(!on)return; once+=+(r.dataset.once||0); month+=+(r.dataset.month||0); if(r.dataset.trad)trad=true;});
+    document.getElementById('once').textContent=fmt(once);
+    document.getElementById('month').innerHTML=fmt(month)+'<small>/ MES</small>';
+    document.getElementById('trad').textContent=trad?'Según presupuesto':'No incluidos';
+    document.getElementById('tradhint').innerHTML=trad?'Referencias: billboards <b>$80 p/d</b>, radio <b>$7,000/mes</b>, TV <b>$5,000/mes</b>; prensa, revistas, auspicios y eventos según presupuesto.':'Radio, TV, billboards, prensa y auspicios se cotizan <b>según el presupuesto disponible</b>.';
+  }
+  rows.forEach(r=>r.querySelector('input').addEventListener('change',calc)); calc();
+})();
+</script>
+</body>
+</html>
