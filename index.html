@@ -215,10 +215,6 @@ section.block{position:relative;padding:112px 0}
 .vcard .meta .ag span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .vcard h4{margin:4px 0 0;font-family:var(--display);font-stretch:108%;font-weight:800;font-size:19px;letter-spacing:-.01em}
 .vcard p{color:var(--muted);font-size:14.5px}
-.vcard.soon .frame{background:linear-gradient(135deg,#2a1416,#180B0D)}
-.vcard.soon .frame .ov{cursor:default}
-.vcard.soon .frame .ov .play{background:rgba(255,255,255,.12);box-shadow:none}
-.vcard .frame .ov .play svg.clock{margin-left:0}
 @media (max-width:900px){.reelgrid{grid-template-columns:1fr}}
 
 /* ---------- Cliente / cobertura: mapa real de PR ---------- */
@@ -590,46 +586,49 @@ footer .mono{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-tr
     <div class="reel rv" id="videos">
       <div class="rhead">
         <div>
-          <h3>Algunos de nuestros clientes</h3>
-          <p>Tres muestras del trabajo del grupo: producción institucional, contenido para redes y comunicación telefónica. Toca para reproducir.</p>
+          <h3>Tres compañías, un solo centro estratégico</h3>
+          <p>Conozca en video cada una de las divisiones que trabajarán juntas para Villa Ana: la agencia de publicidad, la división digital y la de comunicación telefónica. Toca para reproducir.</p>
         </div>
-        <span class="tag">Showreel · 3 piezas</span>
+        <span class="tag">Videos institucionales · 3</span>
       </div>
       <div class="reelgrid">
         <article class="vcard">
-          <div class="frame">
-            <img src="studio.jpg" alt="">
-            <span class="lbl">Video institucional</span>
-            <a class="ov" href="https://drive.google.com/file/d/18BgDMODtoCinN4zZOy1ZxrFGLRfyuRCM/view?usp=drive_link" target="_blank" rel="noopener" aria-label="Ver video institucional de Grupo Mamery en Google Drive"><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span></a>
+          <div class="frame" data-video>
+            <video preload="metadata" playsinline poster="poster-mamery.jpg" src="video-mamery.mp4"></video>
+            <span class="lbl">Agencia · Publicidad y medios</span>
+            <span class="dur">2:25</span>
+            <button class="ov" type="button" aria-label="Reproducir presentación de Grupo Mamery"><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span></button>
           </div>
           <div class="meta">
-            <div class="ag"><img src="logo-mamery.png" alt="Grupo Mamery"><span>Producción</span></div>
-            <h4>Video institucional · Grupo Mamery</h4>
-            <p>Dirección, fotografía profesional y locución para marcas en Puerto Rico. Se abre en una pestaña nueva.</p>
+            <div class="ag"><img src="logo-mamery.png" alt="Grupo Mamery"><span>Agencia</span></div>
+            <h4>Presentación · Grupo Mamery</h4>
+            <p>La agencia: estrategia publicitaria, compra de medios tradicionales y producción audiovisual masiva.</p>
           </div>
         </article>
         <article class="vcard">
           <div class="frame" data-video>
             <video preload="metadata" playsinline poster="poster-arroba.jpg" src="video-arroba.mp4"></video>
-            <span class="lbl">Audiovisual · Redes sociales</span>
+            <span class="lbl">Digital · Redes sociales</span>
             <span class="dur">1:38</span>
             <button class="ov" type="button" aria-label="Reproducir audiovisual de Arroba"><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span></button>
           </div>
           <div class="meta">
             <div class="ag"><img class="arroba" src="logo-arroba.png" alt="Arroba"><span>Digital</span></div>
-            <h4>Audiovisual Arroba · Redes Sociales 2025</h4>
-            <p>Contenido para redes sociales: el estándar visual que llevaríamos a las 17 localidades de Villa Ana.</p>
+            <h4>Audiovisual · Arroba Redes Sociales</h4>
+            <p>La división digital: manejo de redes sociales, desarrollo web y campañas de rendimiento online.</p>
           </div>
         </article>
-        <article class="vcard soon" id="vcard-soh">
-          <div class="frame">
+        <article class="vcard">
+          <div class="frame" data-video>
+            <video preload="metadata" playsinline poster="poster-soh.jpg" src="video-soh.mp4"></video>
             <span class="lbl">Telefonía · Audio corporativo</span>
-            <div class="ov"><span class="play"><svg class="clock" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span></div>
+            <span class="dur">1:49</span>
+            <button class="ov" type="button" aria-label="Reproducir video de SOH Telefonía"><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4v16l14-8z"/></svg></span></button>
           </div>
           <div class="meta">
             <div class="ag"><img src="logo-spotonhold.png" alt="Spot on Hold"><span>Telefonía</span></div>
             <h4>SOH Telefonía · Spot on Hold</h4>
-            <p>Experiencia telefónica del cliente: mensajes en espera, IVR y audio corporativo. Video próximamente.</p>
+            <p>Comunicación empresarial: audio corporativo, mensajes en espera y experiencia telefónica del cliente.</p>
           </div>
         </article>
       </div>
